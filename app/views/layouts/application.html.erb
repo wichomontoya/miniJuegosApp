@@ -9,9 +9,67 @@
   </head>
 
   <body>
-  	<p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+  	<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="/games/home">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/users/sign_in" type="button" class="btn btn-md" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav" id="col-der">
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+    </div>
+    <div class="col-sm-8 text-left"> 
+      <div class="container-fluid well">
+        <div class="row">
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+        </div>
+        <%= yield %>
+      </div>
+    </div>
+    <div class="col-sm-2 sidenav" id="col-izq">
+      <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <p>ADS</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-    <%= yield %>
+<footer class="container-fluid text-center">
+  <p>Desarrollado por:</p>
+  <ul>
+    <li>Javier Banguero</li>
+    <li>Juan Pablo Ordoñez</li>
+    <li>Wilson Montoya</li>
+  </ul>
+</footer>
+
+
+
   </body>
 </html>
