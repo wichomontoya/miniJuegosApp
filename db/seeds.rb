@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Game.create(name: "MemoKey", description: "Es un juego para ejercitar la memoria, en el que deberas seguir la secuencia de las letras que te muestra y asi lograr el mayor puntaje")
+Game.create(name: "MecaPro", description: "Es un juego para ejercitar la memoria, en el que deberas seguir la secuencia de las letras que te muestra y asi lograr el mayor puntaje")

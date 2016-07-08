@@ -3,11 +3,11 @@ Rails.application.routes.draw do
 	devise_for :users, controllers: {
         sessions: 'users/sessions',registrations: 'users/registrations'
       }
+      resources :games do
+      	resources :user
+      end
 
-  get 'games/home'
-  get 'games/index'
-  get 'games/show'
 
-  root to: 'games#home'
+  root to: 'games#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -17,7 +17,7 @@
 
 body {
 	background-color: black;
-	background: url(/public/fondo.jpg) center center cover no-repeat fixed; 
+	background-image: url(/app/assets/images/fondo.jpg);  
 
 }
 
@@ -27,4 +27,15 @@ body {
 
 #col-izq{
 	background-color: transparent;	
+}
+.jumbotron{
+	background-image: url(http://i0.wp.com/www.silviagaliana.com/wp-content/uploads/2014/04/Fondo-The-Legend-of-Zelda-Trifuerza.jpg);
+}
+#jumbotron{
+	background-color:transparent;
+	height:  200px;
+
+}
+nav{
+	background-color:	#34495e;
 }
