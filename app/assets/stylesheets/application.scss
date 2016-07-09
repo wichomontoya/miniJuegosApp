@@ -16,9 +16,12 @@
    @import "bootstrap";
 
 body {
-	background-color: black;
-	background-image: url(/app/assets/images/fondo.jpg);  
-
+	background-color: #333333;
+	background-image: url(http://www.localwom.com/i/classic-gaming-high-resolution-wallpapers.jpg);
+	background-size: cover;  
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
 }
 
 #col-der{
@@ -28,14 +31,35 @@ body {
 #col-izq{
 	background-color: transparent;	
 }
-.jumbotron{
-	background-image: url(http://i0.wp.com/www.silviagaliana.com/wp-content/uploads/2014/04/Fondo-The-Legend-of-Zelda-Trifuerza.jpg);
-}
-#jumbotron{
-	background-color:transparent;
-	height:  200px;
 
+.jumbotron{
+	background-color:transparent;
+	background-size:contain;
+	background-position:center;
 }
-nav{
-	background-color:	#34495e;
+
+.navbar{
+	border-color: transparent;
+	background-color:	transparent;
+}
+
+
+footer{
+	background-color: transparent;
+	color:white;
+	padding: 50px;
+}
+
+input{
+	color: black;
+}
+
+#cuerpo{
+	background-color: black;
+	opacity: 0.95;
+	color: white;
+}
+
+h1{
+	color: white;
 }

@@ -8,7 +8,7 @@ class GamesController < ApplicationController
   	@game=Game.find(params[:id])
   end
 
- # def home
-  #	@games=Game.all
-  #end
+  def play
+  	#@game=Game.find(params[:id])
+  end
 end

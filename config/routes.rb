@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
 
+	resources :games do
+      	get :play
+      	resources :user
+     end
+
 	devise_for :users, controllers: {
         sessions: 'users/sessions',registrations: 'users/registrations'
       }
-      resources :games do
-      	resources :user
-      end
+
 
 
   root to: 'games#index'
