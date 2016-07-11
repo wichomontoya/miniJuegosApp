@@ -18,6 +18,24 @@
 	</div>
 </div>
 
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<table>
+				<th class="col-sm-6 ">Usuario</th>
+				<th class="col-sm-6 ">Score</th>
+				<%@games.each do |game|%>
+					<tr class="col-sm-6">
+						<%=game.rankings%>
+					</tr>
+				<%end%>
+			</table>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
+</div>
+
 
 
 

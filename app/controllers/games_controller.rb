@@ -5,10 +5,17 @@ class GamesController < ApplicationController
   end
 
   def show
+    @games=Game.all
   	@game=Game.find(params[:id])
   end
 
   def play
-  	#@game=Game.find(params[:id])
+  	
+  end
+
+  def score
+    @game=Game.find(params[:id])
+    @player=@game.rankings.find_by user_id: current_user.id
+    @game.rankings.create(user: current_user,score:params[:score])
   end
 end

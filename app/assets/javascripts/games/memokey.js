@@ -74,6 +74,8 @@ $(document).ready(function(){
 		letrasUsuario=[];
 	}
 
+	//Funcion que contabiliza el tiempo para que acabe el juego
+
 	function cronometro(){
 			
 		 s = document.getElementById("segundos");
@@ -95,6 +97,15 @@ $(document).ready(function(){
 
 	}
 
+	function terminarJuego(){
+		$("#cerrar").clic(function(){
+    		$.ajax({
+    		type: "POST",
+    		url: "/games/1/score",
+    		data:  {score:$("#puntos").text()},
+    		});
+		});
+	};
 });	
 
 

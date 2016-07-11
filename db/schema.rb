@@ -24,13 +24,13 @@ ActiveRecord::Schema.define(version: 20160709013300) do
   end
 
   create_table "rankings", force: :cascade do |t|
-    t.integer  "users_id"
-    t.integer  "games_id"
-    t.integer  "ranking"
+    t.integer  "user_id"
+    t.integer  "game_id"
+    t.integer  "score"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["games_id"], name: "index_rankings_on_games_id", using: :btree
-    t.index ["users_id"], name: "index_rankings_on_users_id", using: :btree
+    t.index ["game_id"], name: "index_rankings_on_game_id", using: :btree
+    t.index ["user_id"], name: "index_rankings_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -52,6 +52,6 @@ ActiveRecord::Schema.define(version: 20160709013300) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
-  add_foreign_key "rankings", "games", column: "games_id"
-  add_foreign_key "rankings", "users", column: "users_id"
+  add_foreign_key "rankings", "games"
+  add_foreign_key "rankings", "users"
 end
