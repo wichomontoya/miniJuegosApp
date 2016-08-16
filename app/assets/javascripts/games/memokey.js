@@ -103,6 +103,7 @@ $(document).ready(function(){
     		type: "POST",
     		url: "/games/1/score",
     		data:  {score:$("#puntos").text()},
+    		dataType: 'JSON'
     		});
 		});
 	};

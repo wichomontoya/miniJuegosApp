@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
 	resources :games do
       	get :play
+      	post :score
       	resources :user
      end
 

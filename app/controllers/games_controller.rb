@@ -1,5 +1,5 @@
 class GamesController < ApplicationController
-	 before_action :authenticate_user!
+	 before_action :authenticate_user!, only: [:play]
   def index
   	@games=Game.all
   end
@@ -15,7 +15,8 @@ class GamesController < ApplicationController
 
   def score
     @game=Game.find(params[:id])
-    @player=@game.rankings.find_by user_id: current_user.id
     @game.rankings.create(user: current_user,score:params[:score])
+    pry
+    redirect_to '/'
   end
 end
